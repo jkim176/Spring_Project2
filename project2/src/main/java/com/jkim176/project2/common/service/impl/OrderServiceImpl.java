@@ -32,9 +32,14 @@ public class OrderServiceImpl {
 			Customer customer = optionalCustomer.get();
 			Iterable<Order> itOrder = this.orderRepostiory.findAll();
 			itOrder.forEach(order -> {
+				if(order.getCustomer().getId() == customer.getId()) {
+					orderList.add(order);
+				}
+				/*
 				if(order.getCustomer() == customer) {
 					orderList.add(order);
 				}
+				*/
 			});
 		}
 		
