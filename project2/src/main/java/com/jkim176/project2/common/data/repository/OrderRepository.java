@@ -9,6 +9,6 @@ import com.jkim176.project2.common.data.entity.Order;
 @Repository
 public interface OrderRepository extends MyBaseRepository<Order, Long> {
 
-	Optional<Order> findById(Long id);
+	Optional<Order> findById(long id);
 	Iterable<Order> findAll();
 }

@@ -9,6 +9,6 @@ import com.jkim176.project2.common.data.entity.Customer;
 @Repository
 public interface CustomerRepository extends MyBaseRepository<Customer, Long> {
 	
-	Optional<Customer> findById(Long id);
+	Optional<Customer> findById(long id);
 	Iterable<Customer> findAll();
 }
