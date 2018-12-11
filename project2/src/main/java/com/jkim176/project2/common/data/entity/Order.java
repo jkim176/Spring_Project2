@@ -30,6 +30,12 @@ public class Order {
 	@JoinColumn(name="ORDER_CUSTOMER_ID")
 	private Customer customer;
 	
+	public Order(Date dateOrdered, Date dateShipped, Customer customer) {
+		this.dateOrdered = dateOrdered;
+		this.dateShipped = dateShipped;
+		this.customer = customer;
+	}
+	
 	//private double total;
 	
 	public long getId() {

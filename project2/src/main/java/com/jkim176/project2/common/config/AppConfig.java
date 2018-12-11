@@ -1,6 +1,7 @@
 package com.jkim176.project2.common.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +11,7 @@ import com.jkim176.project2.common.service.OrderService;
 
 @Configuration
 @ComponentScan(basePackages= {"com.jkim176.project2.common"})
-@EnableAutoConfiguration
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class AppConfig {
 	
 	public static void main(String[] args) {

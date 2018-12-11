@@ -33,6 +33,11 @@ public class Customer {
 				cascade=CascadeType.ALL)
 	private List<Order> orders = new ArrayList<>();
 	
+	public Customer(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	
 	public long getId() {
 		return id;
 	}
